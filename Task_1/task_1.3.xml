@@ -1,0 +1,38 @@
+<Table_3 sr = "Table_3">
+    <Details>
+        <name> John Doe </name>
+        <address>
+            <flat> </flat>
+            <house> 38 </house>
+            <road_no> 3 </road_no>
+            <area> Banani </area>
+            <division> Dhaka </division>
+        </address>
+        <department> Sales </department>
+        <salary> $20000 </salary>
+    </Details>
+    <Details>
+        <name> Mark Zuckerberg </name>
+        <address>
+            <flat> A/1 </flat>
+            <house> 20 </house>
+            <road_no> 18 </road_no>
+            <area> Mirpur </area>
+            <division> Dhaka </division>
+        </address>
+        <department> Accounts </department>
+        <salary> $12000 </salary>
+    </Details>
+    <Details>
+        <name> Ala Voski </name>
+        <address>
+            <flat> </flat>
+            <house> 38 </house>
+            <road_no> 3 </road_no>
+            <area>  Motijhee </area>
+            <division>  </division>
+        </address>
+        <department> Human Resource </department>
+        <salary> $30000 </salary>
+    </Details>
+</Table_3>
