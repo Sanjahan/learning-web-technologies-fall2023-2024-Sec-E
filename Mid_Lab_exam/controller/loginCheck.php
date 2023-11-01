@@ -1,0 +1,21 @@
+<?php
+
+    include_once("../model/userModel.php");
+    $id = ""; 
+    $password = "";
+
+if (isset($_POST["submit"])) {
+
+    $id = $_POST["id"];
+    $password = $_POST["password"];
+
+
+    if (!$_POST['id'] || !$_POST['password']) {
+        echo "Please complete all required fields\n";
+    }
+    else {
+        login($id, $password);
+    }
+}
+
+?>
