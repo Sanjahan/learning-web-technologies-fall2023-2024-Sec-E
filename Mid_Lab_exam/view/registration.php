@@ -1,47 +1,72 @@
 <?php
-include_once("../controller/registrationCheck.php")
+include_once("../controller/registrationCheck.php");
+
 ?>
+<html>
 
-<center>
-    <form action="" method="POST" enctype="">
-        <table border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td>
-                    <fieldset>
-                        <legend>
-                            <h3>REGISTRATION</h3>
-                        </legend>
-                        Id<br /><input type="text" name="id" value="<?php echo $id ?>" /><br />
+<head>
+    <title>Registration</title>
+</head>
 
-                        Password<br />
-                        <input type="password" name="password" value="<?php echo $password ?>" /><br />
+<body>
+    <table border = '1' width= 100%>
+        <tr>
+            <td align = "center">
+                <a href="login.php">login</a>
+                | <a href="registration.php">Registration</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan = "2">
+                <center>
+                    <form action="" method="POST" enctype="">
 
-                        Confirm Password<br />
-                        <input type="password" name="confirmPassword" value="<?php echo $confirmPassword ?>" /><br />
 
-                        Name<br />
-                        <input type="text" name="name" value="<?php echo $name ?>" /><br />
+                        <h3>REGISTRATION</h3>
+                        <hr>
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td><label for="name">Name</label> </td>
+                                <td> : <input type="text" name="name" value="<?php echo $name ?>"/> <span><?= $nameError ?></span> </td>
+                            </tr>
+                            <tr>
+                                <td><label for="cname">Company Name</label> </td>
+                                <td> : <input type="text" name="cname" value="<?php echo $cname ?>"/> <span><?= $cnameError ?></span> </td>
+                            </tr>
+                            <tr>
+                                <td><label for="username">Username</label> </td>
+                                <td> : <input type="text" name="username" value="<?php echo $username ?>"/> <span><?= $usernameError ?></span> </td>
+                            </tr>
+                            
+                            <tr>
+                                <td><label for="number">Number</label> </td>
+                                <td> : <input type="text" name="number" value="<?php echo $number ?>"/> <span><?= $numberError ?></span> </td>
+                            </tr>
+                            <tr>
+                                <td><label for="password">Password</label> </td>
+                                <td> : <input type="password" name="password" value="<?php echo $password ?>"/> <span><?= $passwordError ?></span> </td>
+                            </tr>
+                            <tr>
+                                <td><label for="confirmPassword">Confirm Password</label> </td>
+                                <td> : <input type="password" name="confirmPassword" value="<?php echo $confirmPassword ?>"/> <span><?= $confirmPasswordError ?></span> </td>
+                            </tr>
+                        </table>
+                        <div>
+                            <p><?= $error ?></p>
+                            <br>
+                            <input type="submit" value="Sign Up" name="submit" />
+                        </div>
+                    </form>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td colspan = "2" align = "center">
+                <h6>Copyright @ 2017</h6>
+            </td>
+        </tr>
+    </table>
+    
+</body>
 
-                        User Type
-                        <hr />
-                        <input type="radio" name="type" value="user" 
-						<?php 
-							if ($user_type && $user_type == "user") {
-                                echo 'checked="checked"';
-                        	}  
-						?> />User
-                        <input type="radio" name="type" value="admin" 
-						<?php 
-							if ($user_type && $user_type == "admin") {
-                                echo 'checked="checked"';
-                            } 
-						?> />Admin
-                        <hr />
-                        <input type="submit" name="submit" value="Sign Up"  />
-                        <a href=" login.php">Sign In</a>
-                    </fieldset>
-                </td>
-            </tr>
-        </table>
-    </form>
-</center>
+</html>
